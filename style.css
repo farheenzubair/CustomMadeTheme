@@ -1,0 +1,524 @@
+/**
+ * Theme Name:        CustomMadeTheme
+ * Theme URI:         https://example.com/custom-made-theme
+ * Description:       Custom theme to design layouts for a blog website
+ * Version:           1.0.0
+ * Author:            Farheen
+ * Author URI:        https://farheen.com
+ * Tags:              block-patterns, full-site-editing
+ * Text Domain:       custom-made-theme
+ * Requires PHP:      7.4
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/* Base styling */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Header styling */
+.site-header {
+    background: #ffffff;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.header-container {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.site-logo img {
+    max-height: 50px;
+    margin-left: 100px;
+}
+
+.site-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.main-menu li {
+    margin-right: 10px;
+}
+
+.main-menu li:last-child {
+    margin-right: 0;
+}
+
+.main-menu li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.main-menu li.current-menu-item a {
+    background-color: rgb(231, 62, 43);
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+/* Search form styling */
+.header-search {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 100px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-field {
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    margin: 0;
+}
+
+.search-submit {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 100px;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.search-submit i {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Footer styling */
+.site-footer {
+    background: #ffffff;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-line {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 0 0 20px 0;
+    width: 79%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.author-name {
+    color: rgb(231, 62, 43);
+}
+
+/* Featured image styling */
+.featured-image-container {
+    width: auto;
+    margin-bottom: -7px;
+}
+
+.featured-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Overlay text styling */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 350px;
+}
+
+.overlay-text h1 {
+    margin: 0;
+    font-size: 3.5rem;
+}
+
+.overlay-text p {
+    margin: 20px 0 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Feature containers styling */
+.three-containers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(226, 226, 226);
+}
+
+.container-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+    max-width: 300px;
+    text-align: left;
+    padding: 5px;
+}
+
+.container-item h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    color: rgb(231, 62, 43);
+}
+
+.container-item p {
+    margin: 0;
+    padding-right: 10px;
+    font-size: small;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.icon i {
+    color: #ffffff;
+}
+
+/* Main Footer styling */
+.main-footer {
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    text-align: left;
+    margin-left: 250px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.footer-column {
+    width: 45%;
+    text-align: left;
+}
+
+.footer-column h2 {
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a .fab {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.social-icons a:nth-child(1) {
+    background-color: #3b5998; /* Facebook */
+}
+
+.social-icons a:nth-child(2) {
+    background-color: #0077b5; /* LinkedIn */
+}
+
+.social-icons a:nth-child(3) {
+    background-color: #e4405f; /* Instagram */
+}
+
+.social-icons a:nth-child(4) {
+    background-color: #bd081c; /* Pinterest */
+}
+
+.social-icons a:nth-child(5) {
+    background-color: #1da1f2; /* Twitter */
+}
+
+.social-icons a:hover {
+    opacity: 0.9;
+}
+
+.email {
+    color: rgb(231, 62, 43);
+}
+
+/* Portfolio shortcode styling */
+.portfolio-shortcode {
+    text-align: center;
+}
+
+.view-all-button {
+    padding: 8px 10px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Portfolio grid styling */
+.heading1-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 520px;
+    margin-top: 40px;
+}
+
+.section-divider1 {
+    border: none;
+    height: 1px;
+    background-color: #000;
+    margin-bottom: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 7px;
+    margin-left: 200px;
+    margin-right: 185px;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin-left: -52px;
+    width: 87%;
+}
+
+/* Blog page styling */
+.blog-page-container {
+    display: flex;
+    margin: 50px auto;
+    max-width: 925px;
+}
+
+.blog-content {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.post-item {
+    margin-bottom: 40px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.post-header:hover {
+    background-color: rgb(231, 62, 43);
+}
+
+.post-date-title {
+    display: flex;
+    align-items: center;
+}
+
+.post-title-separator {
+    margin: 0 10px;
+}
+
+.post-title {
+    font-size: 22px;
+    margin: 0;
+}
+
+.post-meta {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Single post page styling */
+.single-post-container {
+    margin: 50px auto;
+    max-width: 925px;
+}
+
+.single-post-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.single-post-content {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: rgb(231, 62, 43);
+}
+
+.pagination .current {
+    background-color: rgb(231, 62, 43);
+    color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .main-menu li {
+        margin-bottom: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-grid1 {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-logo img {
+        max-height: 40px;
+    }
+
+    .search-field {
+        width: 100px;
+    }
+
+    .search-submit {
+        padding: 4px;
+    }
+
+    .overlay-text h1 {
+        font-size: 2rem;
+    }
+
+    .overlay-text p {
+        font-size: 12px;
+    }
+
+    .three-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-item {
+        max-width: 100%;
+    }
+
+    .footer-line {
+        width: 100%;
+    }
+}
